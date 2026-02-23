@@ -32,9 +32,10 @@ genai.configure(api_key=GENAI_API_KEY)
 app = FastAPI()
 
 # Allow CORS for Next.js frontend
+ALLOWED_ORIGINS = os.getenv("ALLOWED_ORIGINS", "http://localhost:3000").split(",")
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],
+    allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

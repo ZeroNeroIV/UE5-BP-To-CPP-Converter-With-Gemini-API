@@ -114,5 +114,7 @@ next-env.d.ts
 .env.production.local
 *.env
 
-# Exception: Always keep the example file to share with the team
+# Exception: Always keep the example files to share with the team
 !.env.example
+backend/.env.example
+frontend/.env.local.example

@@ -47,7 +47,7 @@ export default function Home() {
     }
 
     try {
-      const res = await fetch("http://localhost:8080/convert", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8080'}/convert`, {
         method: "POST",
         body: formData,
       });
